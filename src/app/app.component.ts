@@ -1,6 +1,6 @@
 import { Component, ModuleWithComponentFactories, OnInit } from '@angular/core';
 import { DaneOsobowe } from './dane_osobowe';
-import { Osoba } from './osoba';
+// import { Osoba } from './osoba';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,7 @@ import { Osoba } from './osoba';
 //     zmienna1 = 'Pusty tekst';
 //     zmienna1 = 'to jest zmienna którą można zmieniać w obrębie metody';
 //     console.log('zmienna1:', zmienna1);
-
+ 
 //     const x: number = 0;
 //     const y: number = 1;
 //     let wynik: number;
@@ -28,14 +28,14 @@ import { Osoba } from './osoba';
 //     console.log("wynik odej: ",wynik = x-y)
 //     console.log("wynik mnoz: ",wynik = x*y)
 //     console.log("wynik dziel: ",wynik = y/x)
-
-
+ 
+ 
 //     let tekstLaczony = `przykładowy teks ${zmienna1},przykładowy teskt ${this.title} koniec`;
 //     console.log(tekstLaczony);
 //     console.log(`przykładowy tekst ${zmienna1} przykładowy teskt ${this.title} koniec`);
 //   }
 // }
-
+ 
 //Zad 4.
 // export class AppComponent implements OnInit {
 //   liczba1: number = 0; // trzeba przypisać wartości
@@ -74,7 +74,7 @@ import { Osoba } from './osoba';
 //     console.log('tablicaAny2',this.tablicaAny2);
 //   }
 // }
-
+ 
 //Zad 5.
 // export class AppComponent implements OnInit{
 //   name: String = "Andżej";
@@ -101,7 +101,7 @@ import { Osoba } from './osoba';
 //   return console.log(x, '+',y,'=',x+y);
 // }
 // }
-
+ 
 // export function f1Subtract (x: any, y: any){
 //   return x-y;
 // }
@@ -176,89 +176,170 @@ import { Osoba } from './osoba';
 //     return sum % 2 == 0 ? true : false;
 //   }
 // }
+ 
+//Lab1 Zad 7
+// export class AppComponent implements OnInit {
+//   osoba: Osoba | undefined; // deklaracja
+//   mojTyp: DaneOsobowe | undefined;
+//   listaOsob1: Osoba[] = []; // deklaracja i inicjalizacja pustą tablicą []
+//   listaOsob2: Osoba[] = [ // deklaracja z inicjalizacją
+//     {
+//       id: 23,
+//       imie: 'Bożena'
+//     },
+//     {
+//       id: 34,
+//       imie: 'Dorota'
+//     },
+//     {
+//       id: 55,
+//       imie: 'Wojciech'
+//     },
+//     //this.mojTyp
+//   ];
+//   tablicaOsob: DaneOsobowe[] = [];
+//   constructor() { }
+//   ngOnInit() {
+//     this.initOsoby();
+//     console.log('osoba', this.osoba);
+//     console.log('listaOsob1', this.listaOsob1);
+//     console.log('listaOsob2', this.listaOsob2);
+//     if (this.listaOsob1.length < 4) {
+//       console.log(false);
+//     } else if (this.listaOsob1.length > 4) {
+//       console.log(true);
+//     } else {
+//       console.log('lista osób = 4');
+//     }
+ 
+//     let marcin: DaneOsobowe = new DaneOsobowe();
+//     marcin.id = 1;
+//     marcin.imie = 'marcin';
+//     marcin.nazwisko = 'mróz';
+//     marcin.kierowca = true;
+//     marcin.wiek = 12;
+//     marcin.motto = 'koko dżambo i do przodu'
+//     this.tablicaOsob.push(marcin);
+ 
+//     let janusz: DaneOsobowe = new DaneOsobowe();
+//     janusz.id = 2;
+//     janusz.imie = 'janusz'
+//     janusz.nazwisko = 'marciniak'
+//     janusz.kierowca = false;
+//     janusz.motto = ' to moje motto'
+//     this.tablicaOsob.push(janusz);
+ 
+//     let kasia: DaneOsobowe = new DaneOsobowe();
+//     kasia.id = 3;
+//     kasia.imie = 'kasia';
+//     kasia.nazwisko = 'strączek';
+//     kasia.kierowca = true;
+//     kasia.wiek = 33;
+//     kasia.motto = 'dobre, nie?'
+//     this.tablicaOsob.push(kasia);
+ 
+//     for(let osoby of this.tablicaOsob)
+//     console.log('id:', osoby.id,'imie', osoby.imie, 'nazwisko:', osoby.nazwisko, 'wiek:', osoby.wiek, 'kierowca; ', osoby.kierowca,
+//       'motto:', osoby.motto);
+ 
+//   }
+//   initOsoby() { // metoda inicjalizująca dane
+//     this.osoba = new Osoba();
+//     this.osoba.id = 1;
+//     this.osoba.imie = 'Karol';
+//     this.listaOsob1.push(this.osoba);
+//     const osoba2 = new Osoba(); // const: stała
+//     osoba2.id = 2;
+//     osoba2.imie = 'Monika';
+//     this.listaOsob1.push(osoba2);
+//     let osoba3 = new Osoba(); // let zmienna lokalna
+//     osoba3.id = 3;
+//     osoba3.imie = 'Piotr';
+//     this.listaOsob1.push(osoba3);
+//     osoba3 = new Osoba();
+//     osoba3.id = 4;
+//     osoba3.imie = 'Teresa';
+//     this.listaOsob1.push(osoba3);  
+//   }
+// }
+ 
+//Lab 2 Ćw 1 
+// export class AppComponent {
+//   title = 'Angulara';
+//   inputText = 'Przykladowy tekst';
+//   date = new Date();
+//   liczbaE = Math.E;
+//   osoba = new Osoba('Jan Nowak', true, 56);
+//   pi = Math.PI;
+//   tablicaAny = [1, 'Ala', true, null, 21.37]
+// }
+ 
+// Lab 2 Ćw 2
+// export class AppComponent {
+//   title = 'Dni tygodnia';
+ 
+//   dniTygodnia = [
+//     'poniedziałek',
+//     'wtorek',
+//     ' środa ',
+//     ' czwartek ',
+//     ' piątek ',
+//     ' sobota',
+//     ' niedziela '
+//   ];
 
-//Zad 7
-export class AppComponent implements OnInit {
-  osoba: Osoba | undefined; // deklaracja
-  mojTyp: DaneOsobowe | undefined;
-  listaOsob1: Osoba[] = []; // deklaracja i inicjalizacja pustą tablicą []
-  listaOsob2: Osoba[] = [ // deklaracja z inicjalizacją
-    {
-      id: 23,
-      imie: 'Bożena'
-    },
-    {
-      id: 34,
-      imie: 'Dorota'
-    },
-    {
-      id: 55,
-      imie: 'Wojciech'
-    },
-    //this.mojTyp
-  ];
-  tablicaOsob: DaneOsobowe[] = [];
-  constructor() { }
-  ngOnInit() {
-    this.initOsoby();
-    console.log('osoba', this.osoba);
-    console.log('listaOsob1', this.listaOsob1);
-    console.log('listaOsob2', this.listaOsob2);
-    if (this.listaOsob1.length < 4) {
-      console.log(false);
-    } else if (this.listaOsob1.length > 4) {
-      console.log(true);
-    } else {
-      console.log('lista osób = 4');
-    }
+//   title2 = 'Ludzie';
+ 
 
-    let marcin: DaneOsobowe = new DaneOsobowe();
-    marcin.id = 1;
-    marcin.imie = 'marcin';
-    marcin.nazwisko = 'mróz';
-    marcin.kierowca = true;
-    marcin.wiek = 12;
-    marcin.motto = 'koko dżambo i do przodu'
-    this.tablicaOsob.push(marcin);
+//   listaLudzi = [
+//   new Osoba('Maciej', true, 22),
+//   new Osoba('Monika', false, 44),
+//   new Osoba('Michał', true, 18),
+//   new Osoba('Ala', false, 12),
+//   new Osoba('Olek', false, 77)
+// ];
+// } 
 
-    let janusz: DaneOsobowe = new DaneOsobowe();
-    janusz.id = 2;
-    janusz.imie = 'janusz'
-    janusz.nazwisko = 'marciniak'
-    janusz.kierowca = false;
-    janusz.motto = ' to moje motto'
-    this.tablicaOsob.push(janusz);
+//Lab 2 Ćw 4
+// export class AppComponent {
+//   osoby?: Osoba[] = [];
 
-    let kasia: DaneOsobowe = new DaneOsobowe();
-    kasia.id = 3;
-    kasia.imie = 'kasia';
-    kasia.nazwisko = 'strączek';
-    kasia.kierowca = true;
-    kasia.wiek = 33;
-    kasia.motto = 'dobre, nie?'
-    this.tablicaOsob.push(kasia);
+//   dodajOsoby() {
+//     this.osoby = [
+//     new Osoba('Kasia', 'Nowak', 24),
+//     new Osoba('Tomasz', 'null', 66),
+//     new Osoba('Andrzej', 'Wolny', 36)
+//     ];
+//   }
 
-    for(let osoby of this.tablicaOsob)
-    console.log('id:', osoby.id,'imie', osoby.imie, 'nazwisko:', osoby.nazwisko, 'wiek:', osoby.wiek, 'kierowca; ', osoby.kierowca,
-      'motto:', osoby.motto);
+//   usunOsoby() {
+//     this.osoby = [];
+//   }
+//   }
+//   class Osoba {
+//   constructor(public imie: string, public nazwisko?: string | null | undefined,
+//   public wiek?: number) { }
+//   }
 
-  }
-  initOsoby() { // metoda inicjalizująca dane
-    this.osoba = new Osoba();
-    this.osoba.id = 1;
-    this.osoba.imie = 'Karol';
-    this.listaOsob1.push(this.osoba);
-    const osoba2 = new Osoba(); // const: stała
-    osoba2.id = 2;
-    osoba2.imie = 'Monika';
-    this.listaOsob1.push(osoba2);
-    let osoba3 = new Osoba(); // let zmienna lokalna
-    osoba3.id = 3;
-    osoba3.imie = 'Piotr';
-    this.listaOsob1.push(osoba3);
-    osoba3 = new Osoba();
-    osoba3.id = 4;
-    osoba3.imie = 'Teresa';
-    this.listaOsob1.push(osoba3);  
-  }
-}
+// Lab 2 cw 5
+// export class AppComponent implements OnInit {
+//   // zmienna globalna dla komponentu
+//   title = 'projekt1';
+//   inputText = 'Moj input';
+//   zmienKolor = 'color-black';
+//   zmienNapis = 'color-yellow';
+//   isDisabled = true;
+//   logo = '';
+//   htmlContent = '';
+//   ngOnInit(): void { }
+//   zmienUstawienia() {
+//   this.inputText = 'tekst zmieniony';
+//   this.zmienKolor = 'color-brown';
+//   this.isDisabled = false;
+//   this.logo = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
+//   this.htmlContent = '<i>Dawid Wojtas</i>'
+// }
+//   getClass(){
+//     return this.zmienKolor;
+//   }
+//   }
