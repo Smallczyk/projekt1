@@ -1,6 +1,93 @@
 <!-- 
-zad 1
+Lab1 zad 1
 <app-dashboard>app-dashboard</app-dashboard>
 <app-contact>app-contact</app-contact>
 <app-home>app-home</app-home>
 -->
+<!-- //Lab2 Ćw1                                   
+<p>To jest kurs {{ title }}</p>
+<p>przykladowy teks : {{ inputText | uppercase }}</p>            
+<p>suma 2+2 = {{ 2 + 2 }}</p>
+<p>Liczba E to : {{ liczbaE | number: '0.0-2'}}</p>                    
+<p>Dzisiejsza data : {{ date | date: 'd.LL.y'}}</p>
+<div>Mam na imie {{ osoba.imie }}, mam {{ osoba.wiek }} lat</div> 
+<p>Liczba pi: {{ pi | number: '1.0-2' }}</p>
+<div>Tablica: {{ tablicaAny }}</div> -->
+
+ 
+ <!-- Lab2 Ćw 2 -->
+ <!-- <h3>{{ title }}</h3>
+<ul>
+   <li *ngFor=" let dzien of dniTygodnia; let even = even; let first = first; let last = last; let odd = odd";> 
+    dodokonczenia<ng-template [ngIf]=""><span>{{ dzien }}</span></ng-template>
+     
+   </li> -->
+<!-- </ul> 
+<h3>{{ title2 }}</h3>
+<ul>
+   <li *ngFor="let czlowiek of listaLudzi"> 
+     <span *ngIf = "czlowiek.wiek > 60 && czlowiek.czyStudent === false">
+      {{ czlowiek.imie }} {{ czlowiek.czyStudent}} {{ czlowiek.wiek }} {{" <- senior"}}</span>
+     <span *ngIf = "czlowiek.wiek < 20 && czlowiek.czyStudent === true">
+      {{ czlowiek.imie }} {{ czlowiek.czyStudent}} {{ czlowiek.wiek }} {{" <- nastolatek"}}</span>
+     <!- - <span *ngIf = "czlowiek.wiek > 20 && czlowiek.wiek < 60">
+      {{ czlowiek.imie }} {{ czlowiek.czyStudent}} {{ czlowiek.wiek }}</span> - ->
+   </li>
+</ul>  -->
+
+<!-- Lab2 Ćw 3 -->
+<!-- 
+<h3>{{ title }}</h3>
+<div *ngFor="let dzien of dniTygodnia; let i = index;">
+    <div [ngSwitch]="dzien">
+        <div *ngSwitchCase="'poniedziałek'">{{ i + 1 }}) poniedziałek</div>
+        <div *ngSwitchCase="'wtorek'">{{ i + 1 }}) wtorek</div>
+        <div *ngSwitchCase="'środa'">{{ i + 1 }}) środa</div>
+        <div *ngSwitchCase="'czwartek'">{{ i + 1 }}) czwartek</div>
+        <div *ngSwitchCase="'piątek'">{{ i + 1 }}) {{ dzien }}</div>
+        <div *ngSwitchCase="'sobota'">{{ i + 1 }}) {{ dzien }}</div>
+        <div *ngSwitchDefault>{{ i + 1 }}) {{ dzien }}</div>
+    </div>
+</div>
+<h3>{{ title2 }}</h3>
+<div *ngFor="let czlowiek of listaLudzi; let i = index">
+    <div [ngSwitch]="true">
+        <div *ngSwitchCase="!!czlowiek.imie">{{ i + 1 }}) {{ czlowiek.imie }}</div>
+    </div>
+</div> -->
+
+<!-- Lab2 Ćw4 -->
+<!-- <h3>Osoby które nie zdały egzaminu:</h3>
+<div *ngIf="osoby!.length > 0; then wypiszOsoby; else usunieteOsoby"></div>
+<div *ngIf="osoby!.length > 0; then dodaneOsoby; else brakOsob"></div>
+<ng-template #wypiszOsoby>
+<div *ngFor="let osoba of osoby">
+<span>{{ osoba.imie }} </span>
+<span *ngIf="osoba?.nazwisko">{{ osoba.nazwisko }} </span>
+<span>ma {{ osoba.wiek }} lata.</span>
+</div>  
+</ng-template>
+<ng-template #brakOsob>
+<div>Brak osób do wyświetlenia</div>
+</ng-template>
+
+<ng-template #dodaneOsoby>
+    <div>Osoby zostały dodane</div>
+</ng-template>
+<ng-template #usunieteOsoby>
+    <div>Osoby zostały usunięte</div>
+</ng-template>
+<br>
+<button (click)="dodajOsoby()">Dodaj osoby</button>
+<button (click)="usunOsoby()">Usuń osoby</button> -->
+
+<!-- Lab2 Ćw5 -->
+<!-- <h3 [className]="zmienKolor">Wprowadzenie do Angulara</h3>
+<img [src]="logo">
+<br>
+<input [value]="inputText"> {{ inputText }}
+<br><br>
+<button class = "button2">nieedytowalny</button>
+<button (click)="zmienUstawienia()">edytowalny</button>
+<p [innerHTML]="htmlContent"></p>
+<h3 [ngClass]="getClass()">To jest ostatnie zadanie na dziś</h3> -->
