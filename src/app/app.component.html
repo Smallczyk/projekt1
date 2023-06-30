@@ -91,3 +91,47 @@ Lab1 zad 1
 <button (click)="zmienUstawienia()">edytowalny</button>
 <p [innerHTML]="htmlContent"></p>
 <h3 [ngClass]="getClass()">To jest ostatnie zadanie na dziś</h3> -->
+
+<!-- Lab3 Ćw1 -->
+<!-- <h3 [className]="zmienKolor">Wprowadzenie do Angulara</h3>
+<input [disabled]="isDisabled" (focus)="onFocus()">
+<br>
+<input [disabled]="isDisabled" (click)="onClick($event)">
+<br>
+<input [disabled]="isDisabled" (mousemove)="onMouseMove($event)">
+<br>
+<input [disabled]="isDisabled" (paste)="onPaste()"> {{ inputText }}
+<br>
+<input (focus)="cofnijButton()" [className]="zmienTlo">
+<br>
+<input #textInput> 
+<br>
+<button (click)="zmienUstawienia()">edytuj</button>
+<button (click)="zmienButton()" [ngClass]="zmienTlo" >kliknij</button>
+<button (click)="wyswietl(textInput.value)" >wyswietl</button>
+<div *ngIf: czyWyswietlic = true> {{ inputText }}</div> -->
+
+<!-- Lab3 Ćw2 -->
+<!-- <h3>Użycie ngModel</h3>
+<p>Imię ucznia to: {{ imie }}</p>
+<p>Nazwisko ucznia to: {{ nazwisko }}</p>
+<p>Wiek ucznia to: {{ wiek}}</p>
+<br>
+<label for="student">imię: </label>
+<input [(ngModel)]="imie"> {{ imie }}
+<br>
+<label for="student">nazwisko: </label>
+<input [(ngModel)]="nazwisko"> {{ nazwisko }}
+<br>
+<label for="student">wiek: </label>
+<input [(ngModel)]="wiek"> {{ wiek}}
+<button (click)="pushDane()">Wyświetl dane</button>
+<button (click)="clear()">Wyczyść pola</button>
+<br>
+<ul>
+  <li *ngFor="let dane of daneOsobowe">{{ dane }}</li>
+</ul> -->
+
+<!-- Lab3 Ćw3 -->
+<app-studenci-view [studenciItems]="studenci"></app-studenci-view>
+<app-samochody [samochody]="samochody"></app-samochody>

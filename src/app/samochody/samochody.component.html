@@ -1,0 +1,6 @@
+<p>Samochody:</p>
+<ul *ngIf="samochody">
+<li *ngFor="let samochod of samochody; let i = index">
+{{ i + 1 }} {{ samochod.marka }} {{samochod.model}} {{samochod.rok}}
+</li>
+</ul>
