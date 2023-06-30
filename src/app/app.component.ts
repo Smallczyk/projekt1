@@ -1,5 +1,8 @@
 import { Component, ModuleWithComponentFactories, OnInit } from '@angular/core';
 import { DaneOsobowe } from './dane_osobowe';
+import { Samochod } from 'src/samochod';
+// import { AppRoutingModule } from './app-routing.module';
+
 // import { Osoba } from './osoba';
 
 @Component({
@@ -343,3 +346,61 @@ import { DaneOsobowe } from './dane_osobowe';
 //     return this.zmienKolor;
 //   }
 //   }
+
+
+//Lab3 Ćw1
+// export class AppComponent {
+//   inputText = 'Moj input';
+//   zmienKolor = 'color-black';
+//   isDisabled = true;
+//   zmienTlo = '';
+//   czyWyswietlic = false;
+//   zmienUstawienia() {
+//   this.isDisabled = false;
+//   }
+//   onFocus() {
+//   this.zmienKolor = 'color-brown';
+//   }
+//   onClick(event: any) {
+//   console.log(event);
+//   }
+//   onMouseMove(event: any) {
+//   console.log('punktX: ' + event.clientX + ' punktY: ' + event.clientY);
+//   }
+//   onPaste() {
+//   this.inputText = 'Wklejanie zabronione!';
+//   }
+//   zmienButton(){
+//     this.zmienTlo = 'background-yellow';
+//   }
+//   cofnijButton(){
+//     this.zmienTlo = 'background-white';
+//   }
+//   wyswietl(value: string){
+//     this.inputText = value;
+//   }
+//   }
+
+//Lab3 Ćw1
+// export class AppComponent {
+// imie = '';
+// nazwisko = '';
+// wiek: any = 20;
+// daneOsobowe: string[] = [];
+
+//   pushDane(): void{
+//     this.daneOsobowe.push(`imie: ${this.imie}`, `nazwisko: ${this.nazwisko}`, `wiek: ${this.wiek}`);
+//   }
+//   clear(): void {
+//     this.imie = '';
+//     this.nazwisko = '';
+//     this.wiek = '';
+//     this.daneOsobowe = [];
+//   }
+// }
+
+//Lab3 Cw3
+export class AppComponent {
+  studenci = ['Karol', 'Basia', 'Adam', 'Teresa', 'Wojciech', 'Ziemowit'];
+  samochody: Samochod[] = [{marka: 'Skoda', model: 'Fabia', rok: 1999}, {marka: 'Suzuki', model: 'Swift'}];
+}
